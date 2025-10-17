@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #HitterzVolleyball {
+      /* Styles with background */
+      background-image: url('images/Header.png');
+      background-size: cover;       /* entire thing gets covered so none of the image gets cut off */
+      background-position: center;  /* image becomes more centered */
+      background-repeat: no-repeat;
+      color: #ff7300;                 /* text is more readable on header */
+      height: 550px;                /* height of header box */
+      display: flex;                /*text is vertical (header)*/
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+       font-size: 3rem;              /* nice big header */
+  font-weight: 900;             /* very bold */
+  color: #ff4800;                  /* dark gray, easier on eyes than pure black */
+  text-shadow: 2px 2px 300x rgba(235, 116, 61, 0.3); /* soft shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* clean font */
+  letter-spacing: 1px;          /* slight spacing for readability */
+  text-align: center;           /* centers the header */
+    }
+
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto_regular.woff') format('woff');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto_bold.woff') format('woff');
+  font-weight: bold;
+}
+
+
+
+
+  body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ff941b;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+/* Make table bigger and readable */
+#Table {
+  width: 80%;                  /* takes most of the page width */
+  margin: 20px auto;           /* center on page */
+  font-size: 1.1rem;           /* slightly larger text */
+  border-collapse: collapse;   
+  text-align: center;           /* center text in cells */
+  border:1px solid #ffffff;
+}
+
+/* Header styling */
+#Table th {
+  background-color: #ff7300;   /* orange header */
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Row styling */
+#Table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Zebra stripes for rows */
+#Table tr{
+  background-color: #ffffff;
+}
+
+/* Hover effect for interactivity */
+#Table tr:hover {
+  background-color: #ffd89d;
+  cursor: pointer;
+}
+
+/* Optional: card-like shadow around table */
+#Table {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+/* Logo styling */
+.logo {
+  height: 60px;   /* small logo */
+  width: auto;
+  vertical-align: middle; /* aligns logo with links */
+  margin-right: 15px;      /* spacing after logo */
+}
+
+
+nav a {
+  background-color: #ff7300;  
+  padding: 10px;  
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+   
+     /* Wrapper for left & right top boxes */
+
+
+.container-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* Makes heights match */
+  margin-bottom: 20px;
+  padding: 10px;  
+}
+
+
+
+
+/* Left box */
+.container {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  border-radius: 15px; 
+}
+
+.container h1,
+.container p {
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  text-align: left;  
+}
+
+
+
+/* Right box */
+.container-2 {
+  width: 400px;
+  height: 100%;             /* ensure it stretches with the flex wrapper */
+  padding: 0;               /* remove padding so image can touch edges */
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;            /* allows child image to stretch */
+}
+
+.container-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fills while keeping proportions */
+  display: block;           /* removes inline gaps */
+  max-height: 380px; 
+}
+
+
+
+
+
+/* Three boxes underneath */
+.flex-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px; 
+  object-fit: cover; 
+}
+
+.box {
+  flex: 1;
+  height: 300px;               /* a bit taller for balance */
+  background-color: rgba(255, 255, 255, 0.2); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;            /* makes image corners follow radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* fills box neatly */
+  display: block;      /* removes extra spacing */
+}
+
+
+.myButton {
+  box-shadow: -50px 0px 50px -50px #ffffff;
+  background: linear-gradient(to bottom, #ff7300 5%, #ff7300 100%);
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 32px 76px;
+  text-decoration: none;
+  text-shadow: 0px -1px 50px #ffffff;
+  display: inline-block; /* keeps button neat */
+}
+
+.myButton:hover {
+  background-color: #ffb477;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    /* screens for two columns it will change for screens that are medium sized */
+    @media (max-width: 900px) {
+      .flex-item {
+        flex: 1 1 calc((100% - 10px) / 2);  /* 2 columns with 10px gap */
+      }
+
+
+
+
+
+
+
+
+      .flex-item img {
+        height: 250px;
+      }
+    }
+
+
+
+
+
+
+
+
+    /* screens for smaller sized screens */
+    @media (max-width: 100px) {
+      .flex-item {
+        flex: 1 1 100%;  /* width of screen fixed */
+      }
+
+
+
+
+
+
+
+
+      .flex-item img {
+        height: 220px;
+        object-fit: cover;
+      }
+    }
+
+    footer {
+  text-align: center;
+  padding: 20px 40px;            /* more padding for comfort */
+  margin: 40px auto 20px auto;   /* space above and below */
+  background-color: rgba(255, 255, 255, 0.3); /* semi-transparent white */
+  backdrop-filter: blur(10px);   /* nice frosted glass effect */
+  border-radius: 20px;            /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* soft shadow */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  max-width: 1000px;             /* keeps the box from stretching too wide */
+}
+
+
+  </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+  <nav>
+  <img src="images/logo.png" alt="Logo" class="logo">
+  <a href="about.html">About Us</a>
+  <a href="womens-team.html">Women's Team</a>
+  <a href="mens-team.html">Men's Team</a>
+  <a href="association-club-contacts.html">Get involved</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="clips.html">Clips</a>
+</nav>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+  <h1 id="HitterzVolleyball">HITTERZ VOLLEYBALL</h1>
+
+  <div class="schedule-box">
+  <table id="Table">
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Activity</th>
+      <th>Where</th>
+    </tr>
+    <tr>
+      <td>Sunday</td>
+      <td>5:50–8:30 PM</td>
+      <td>Women's Team Training</td>
+      <td>Selwyn College – Small Gym</td>
+    </tr>
+    <tr>
+      <td>Saturday</td>
+      <td>5:50–8:30 PM</td>
+      <td>Men's Team Training</td>
+      <td>Selwyn College – Small Gym</td>
+    </tr>
+  </table>
+</div>
+
+<div class="container-wrapper">
+  <!-- Left box -->
+  <div class="container">
+  <h1> Kia Ora // Kamusta </h1>
+  <p>
+    Hitterz Volleyball is based in Auckland, providing opportunities for players of all levels to enjoy and grow in the sport of volleyball. While competitive adult playing numbers are developing, the main focus of Hitterz Volleyball is on <strong>"building the game"</strong> through youth engagement, regional training sessions, and school competitions.  
+    Each year, Hitterz runs <strong>social volleyball</strong> for both indoor and outdoor formats, including grass and beach tournaments, across communities in Auckland.  
+    Competitive teams enter <strong>Northern Zone League</strong> and Auckland-based competitions during the season from July to September, followed by the <strong>National Club Championships</strong> in October.  
+    At a representative level, IPC teams (Youth U19 and adult) are selected annually to compete at the <strong>Inter-Provincial Championships</strong>, held at a North Island venue in June.  
+    During the summer, <strong>Beach Volleyball</strong> is offered at both social and competitive (AA) levels across Auckland beaches. One of the highlights on the calendar is the <strong>Hitterz Slam</strong>, which takes place in late January at Auckland’s North Shore beaches and is part of the <strong>National Beach Volleyball Tour</strong>.
+  </p>
+
+  </div>
+
+
+
+  <!-- Right box -->
+  <div class="container-2">
+    <img src="images/logo3.png" alt="">
+  </div>
+</div>
+
+<a href="#" class="myButton">Club Contacts</a>
+
+<a href="#" class="myButton">Women's Team</a>
+
+<a href="#" class="myButton">Men's Team</a>
+
+<!-- Three boxes underneath -->
+<div class="flex-container">
+  <div class="box">
+    <img src="images/icons for website.png" alt="Box 1 image">
+  </div>
+  <div class="box">
+    <img src="images/icons for website (1).png" alt="Box 2 image">
+  </div>
+  <div class="box">
+    <img src="images/icons for website (2).png" alt="Box 3 image">
+  </div>
+</div>
+
+
+  <h1>UPCOMING GAMES AND TOURNAMENTS TO LOOK OUT FOR</h1>
+  <h2>• Pistang Pinay games in Christchurch October 27–31 (Labour Weekend)</h2>
+  <h2>• Men's Team @ Northern Zone</h2>
+
+
+
+
+
+
+
+
+  <div class="placement-box">
+    <h2>Gallery</h2>
+    <p>volleyball</p>
+  </div>
+
+
+
+
+
+
+
+
+  <h1>Thank you to our sponsors</h1>
+  <h2>Right Education</h2>
+  <h2>Mon's Charity</h2>
+  <h2>And to our patrons, who support our club to the best of their ability every year</h2>
+
+
+
+
+
+
+
+
+  <footer>
+    <p>& copy; 2025 Hitterz Volleyball Club Auckland Incorporated. All rights reserved.</p>
+  </footer>
+
+
+
+
+
+
+
+
+</body>
+</html>
